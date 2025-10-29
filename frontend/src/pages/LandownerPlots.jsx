@@ -1,3 +1,6 @@
+
+
+
 import { useState, useEffect,useRef } from "react";
 import { plotAPI } from "../services/api";
 
@@ -236,7 +239,7 @@ const reuploadInputRef = useRef(null);
     };
     const label = status.charAt(0).toUpperCase() + status.slice(1);
     return (
-      <span className={px-3 py-1 text-xs font-medium rounded-full ${colors[status] || "bg-gray-100 text-gray-700"}}>
+      <span className={`px-3 py-1 text-xs font-medium rounded-full ${colors[status] || "bg-gray-100 text-gray-700"}`}>
         {label}
       </span>
     );
@@ -256,7 +259,7 @@ const reuploadInputRef = useRef(null);
           <h1 className="text-3xl font-bold">My Plots</h1>
           <button
             onClick={() => (showForm && !editingPlotId ? cancelEditing() : handleAddNewClick())}
-            className={px-6 py-3 rounded-md font-medium shadow-md ${showForm && !editingPlotId ? "bg-red-600" : "bg-green-600"} text-white}
+            className={`px-6 py-3 rounded-md font-medium shadow-md ${showForm && !editingPlotId ? "bg-red-600" : "bg-green-600"} text-white`}
           >
             {showForm && !editingPlotId ? "Cancel" : "Add New Plot"}
           </button>
@@ -444,7 +447,7 @@ const reuploadInputRef = useRef(null);
                     {selectedPlot.images.map((img, i) => (
                       <img
                         key={i}
-                        src={http://localhost:5000${img}}
+                        src={`http://localhost:5000${img}`}
                         alt="Plot"
                         className="w-36 h-36 object-cover rounded-lg border"
                       />
@@ -460,7 +463,7 @@ const reuploadInputRef = useRef(null);
                   {selectedPlot.documents.map((doc, i) => (
                     <li key={i}>
                       <a
-                        href={http://localhost:5000${doc.url}}
+                        href={`http://localhost:5000${doc.url}`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-blue-600 hover:underline"
