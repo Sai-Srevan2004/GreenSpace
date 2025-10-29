@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+:root {
+  --color-primary: #2E7D32;      /* Fresh leafy green */
+  --color-secondary: #81C784;    /* Soft spring green */
+  --color-accent: #FFD54F;       /* Warm sunlight yellow */
+  --color-background: #F3F9F4;   /* Gentle greenish white */
+  --color-text: #1B4332; 
+  --primary: #2E7D32;        /* Leafy Green */
+  --secondary: #81C784;      /* Soft Green */
+  --accent-light: #FFF8E1;   /* Light yellow */
+  --accent-dark: #FFD54F;    /* Warm sunlight yellow */
+  --bg-light: #F3F9F4;       /* Gentle greenish background */
+  --text-dark: #1B4332;      /* Deep forest green */
+  --text-muted: #4B5563;     /* Gray-green for subtle text */
+  --border-light: #E5E7EB;   /* Light border */
+}
+        /* Deep forest green */
+
+
+/* Optional: dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1B4332;
+    --color-text: #F3F9F4;
+  }
+}
