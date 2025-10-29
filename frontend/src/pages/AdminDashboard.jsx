@@ -138,7 +138,7 @@ const AdminDashboard = () => {
                                   rel="noopener noreferrer"
                                   className="text-blue-600 hover:underline"
                                 >
-                                  {doc.name || `Document ${idx + 1}`}
+                                  {doc.name || Document ${idx + 1}}
                                 </a>
                               </li>
                             ))}
