@@ -67,15 +67,15 @@ const LandownerBookings = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-[var(--primary)]"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-(--primary)"></div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-screen bg-[var(--bg-light)] py-8">
+    <div className="min-h-screen bg-(--bg-light) py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold text-[var(--text-dark)] mb-8">
+        <h1 className="text-3xl font-bold text-(--text-dark) mb-8">
           Booking Requests
         </h1>
 
@@ -88,11 +88,11 @@ const LandownerBookings = () => {
             {bookings.map((booking) => (
               <div
                 key={booking._id}
-                className="bg-white rounded-lg shadow-md p-6 border-l-4 border-[var(--primary)]"
+                className="bg-white rounded-lg shadow-md p-6 border-l-4 border-(--primary)"
               >
                 <div className="flex justify-between items-start mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-[var(--text-dark)]">
+                    <h3 className="text-xl font-semibold text-(--text-dark)">
                       {booking.plot?.title}
                     </h3>
                     <p className="text-gray-600">
@@ -104,7 +104,7 @@ const LandownerBookings = () => {
                   <span
                     className={`px-3 py-1 rounded-full text-sm font-semibold ${
                       booking.status === 'approved'
-                        ? 'bg-[var(--secondary)]/20 text-[var(--secondary)]'
+                        ? 'bg-(--secondary)/20 text-(--secondary)'
                         : booking.status === 'rejected'
                         ? 'bg-red-100 text-red-700'
                         : booking.status === 'completed'
@@ -141,7 +141,7 @@ const LandownerBookings = () => {
                 </div>
 
                 {booking.message && (
-                  <div className="mb-4 bg-[var(--bg-light)] rounded p-3">
+                  <div className="mb-4 bg-(--bg-light) rounded p-3">
                     <p className="text-sm text-gray-600 font-medium">
                       Message from Gardener
                     </p>
@@ -155,7 +155,7 @@ const LandownerBookings = () => {
                     <>
                       <button
                         onClick={() => handleApprove(booking._id)}
-                        className="bg-[var(--primary)] hover:bg-[var(--secondary)] text-white px-4 py-2 rounded font-medium"
+                        className="bg-(--primary) hover:bg-(--secondary) text-white px-4 py-2 rounded font-medium"
                       >
                         Approve
                       </button>
@@ -170,7 +170,7 @@ const LandownerBookings = () => {
                   {booking.status === 'approved' && (
                     <button
                       onClick={() => handleComplete(booking._id)}
-                      className="bg-[var(--secondary)] hover:bg-[var(--primary)] text-white px-4 py-2 rounded font-medium"
+                      className="bg-(--secondary) hover:bg-(--primary) text-white px-4 py-2 rounded font-medium"
                     >
                       Mark as Completed
                     </button>
