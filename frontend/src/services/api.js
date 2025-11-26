@@ -2,7 +2,7 @@ import axios from 'axios';
 
 //http://localhost:5000/api
 
-const API_BASE_URL = 'https://greenspace-iynp.onrender.com';
+const API_BASE_URL = 'https://greenspace-iynp.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
