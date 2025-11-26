@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 import { plotAPI } from '../services/api';
 
 const PlotsList = () => {
+  const BASE_URL = 'https://greenspace-iynp.onrender.com';
+
   const [plots, setPlots] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filters, setFilters] = useState({
@@ -128,7 +130,7 @@ const PlotsList = () => {
                 <div className="h-48 flex items-center justify-center bg-gray-100">
                   {plot.images && plot.images.length > 0 ? (
                     <img
-                      src={`http://localhost:5000${plot.images[0]}`}
+                      src={`${BASE_URL+plot.images[0]}`}
                       alt={plot.title}
                       className="w-full h-full object-cover"
                     />
