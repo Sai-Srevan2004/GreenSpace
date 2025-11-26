@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { plotAPI, bookingAPI } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 
-const BASE_URL = "http://localhost:5000"; // backend URL
+const BASE_URL = "https://greenspace-iynp.onrender.com/api"; // backend URL
 
 const PlotDetail = () => {
   const { id } = useParams();

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { adminAPI } from '../services/api';
 
 const AdminDashboard = () => {
-  const BASE_URL = "http://localhost:5000";
+  const BASE_URL = "https://greenspace-iynp.onrender.com/api";
 
   const [stats, setStats] = useState(null);
   const [plots, setPlots] = useState([]);
