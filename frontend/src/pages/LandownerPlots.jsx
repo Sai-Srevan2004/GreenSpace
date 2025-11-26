@@ -5,6 +5,8 @@ import { useState, useEffect,useRef } from "react";
 import { plotAPI } from "../services/api";
 
 const LandownerPlots = () => {
+
+  const BASE_URL = "https://greenspace-iynp.onrender.com";
   const [plots, setPlots] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showForm, setShowForm] = useState(false);
@@ -447,7 +449,7 @@ const reuploadInputRef = useRef(null);
                     {selectedPlot.images.map((img, i) => (
                       <img
                         key={i}
-                        src={`http://localhost:5000${img}`}
+                        src={`${BASE_URL+img}`}
                         alt="Plot"
                         className="w-36 h-36 object-cover rounded-lg border"
                       />
@@ -463,7 +465,7 @@ const reuploadInputRef = useRef(null);
                   {selectedPlot.documents.map((doc, i) => (
                     <li key={i}>
                       <a
-                        href={`http://localhost:5000${doc.url}`}
+                        href={`${BASE_URL+doc.url}`}
                         target="_blank"
                         rel="noreferrer"
                         className="text-blue-600 hover:underline"
